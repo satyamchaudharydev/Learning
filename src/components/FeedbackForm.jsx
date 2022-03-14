@@ -47,7 +47,7 @@ export default function FeedbackForm() {
   }, [feedbackEdit]);
   return (
     <Card>
-      <form action="" onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit}>
         <h2>How Would you Rate Your Service woth us?</h2>
         <RatingSelect select={(rating) => setRating(rating)} />
         <div className="input-group">
