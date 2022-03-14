@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/github.io/Learning/static/css/main.fa72ae7b.css",
+    "main.js": "/github.io/Learning/static/js/main.f243298e.js",
+    "index.html": "/github.io/Learning/index.html",
+    "main.fa72ae7b.css.map": "/github.io/Learning/static/css/main.fa72ae7b.css.map",
+    "main.f243298e.js.map": "/github.io/Learning/static/js/main.f243298e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa72ae7b.css",
+    "static/js/main.f243298e.js"
+  ]
+}
