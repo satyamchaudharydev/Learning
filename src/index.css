@@ -176,6 +176,9 @@ ul {
   position: relative;
   overflow: hidden;
 }
+.thanksgiving img{
+  height: 100px;
+}
 .back-btn {
   position: absolute;
   color: var(--light-grey);
