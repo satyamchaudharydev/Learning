@@ -1,18 +1,18 @@
-import Header from "./components/Header";
-import FeedbackList from "./components/FeedbackList";
-import feedbackData from "./Data/FeedbackData";
-import FeedbackStats from "./components/FeedbackStats";
+
 import FeedbackForm from "./components/FeedbackForm";
 import { FeedbackProvider } from "./context/FeedbackContext";
+import { useState } from "react";
+import Reviews from "./components/Reviews";
 function App() {
+  
   return (
     <>
       <FeedbackProvider>
-        <Header text="feedback UI" />
-        <div className="container">
-          <FeedbackForm />
-          <FeedbackStats />
-          <FeedbackList  />
+        <Reviews />
+        <div className="app">
+          <div className="container">
+            <FeedbackForm />
+          </div>
         </div>
       </FeedbackProvider>
     </>

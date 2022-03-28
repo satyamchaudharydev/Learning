@@ -21,9 +21,10 @@ function FeedbackList({ handleDlt }) {
           <AnimatePresence>
             {feedback.map((item) => (
               <motion.div
+                layout="position"
                 key={item.id}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={{ opacity: 1}}
                 exit={{ opacity: 0 }}
               >
                 <FeedbackItem item={item} handleDlt={handleDlt} />
@@ -33,7 +34,7 @@ function FeedbackList({ handleDlt }) {
         </div>
       )}
     </>
-  ); 
+  );
 }
 
 export default FeedbackList;

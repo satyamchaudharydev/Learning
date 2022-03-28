@@ -2,22 +2,48 @@ import { FaTimes, FaEdit } from "react-icons/fa";
 import { useState, useContext } from "react";
 
 import PropTypes from "prop-types";
-import Card from "./shared/Card";
 import FeedbackContext from "../context/FeedbackContext";
 function FeedbackItem({ item }) {
-  const { dltFeedback, editFeedback, feedbackEdit } =
-    useContext(FeedbackContext);
+  const {
+    dltFeedback,
+    editFeedback,
+    feedbackEdit,
+    ip,
+    deleting,
+    setOnSubmit,
+    onSubmit,
+    setReview,
+  } = useContext(FeedbackContext);
+  console.log(ip);
   return (
-    <Card reverse={true}>
+    <div className={`review-item ${deleting === item.id && "deleting"}`}>
       <div className="num-display">{item.rating}</div>
-      <button className="close" onClick={() => dltFeedback(item.id)}>
-        <FaTimes color="purple" />
-      </button>
-      <button className="edit" onClick={() => editFeedback(item)}>
-        <FaEdit color="purple" />
-      </button>
+      {item.ip === ip && (
+        <>
+          <button
+            className="close"
+            onClick={() => {
+              dltFeedback(item.id);
+            }}
+          >
+            <FaTimes />
+          </button>
+
+          <button
+            className="edit"
+            onClick={() => {
+              setOnSubmit(false);
+              editFeedback(item);
+              setReview(false);
+            }}
+          >
+            <FaEdit />
+          </button>
+        </>
+      )}
+
       <div className="text-display">{item.text}</div>
-    </Card>
+    </div>
   );
 }
 FeedbackItem.propTypes = {
